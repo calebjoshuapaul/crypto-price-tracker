@@ -1,13 +1,11 @@
 const tableBody = document.querySelector(".tableBody");
 
-async function fetchData() {
+(async function () {
   const data = await fetch(
     "https://crypto-price-tracker-worker.calebjoshuapaul.workers.dev/"
   )
     .then((response) => response.json())
     .then((data) => data);
-
-  console.log(data);
 
   for (let i = 0; i < data.length; i++) {
     let tr = document.createElement("tr");
@@ -17,6 +15,4 @@ async function fetchData() {
         `;
     tableBody.append(tr);
   }
-}
-
-fetchData();
+})();
