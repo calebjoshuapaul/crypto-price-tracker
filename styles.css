@@ -19,3 +19,9 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+@media (max-width: 1000px) {
+  body {
+    margin: 0 10%;
+  }
+}
